@@ -9,7 +9,7 @@ print(sklearn.__version__)
 
 
 
-app = Flask(__name__, static_folder='Obesity_application/obesity-app/build')
+app = Flask(__name__, static_folder='./Obesity_application/obesity-app/build')
 CORS(app)
 
 # Load the pickled model
@@ -18,7 +18,7 @@ with open('RandomForestClassifierModel', 'rb') as model_file:
 
 @app.route('/')
 def serve_react_app():
-    return app.send_static_file('index.html')
+    return app.send_static_file('./Obesity_application/obesity-app/build/index.html')
 
 @app.route('/<path:path>')
 def serve_any_other_static_file(path):
