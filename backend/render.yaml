@@ -3,11 +3,11 @@ services:
     build:
       context: ./Obesity_application/obesity-app  # Path to your React frontend directory
       dockerfile: Dockerfile  # Optional: Path to a custom Dockerfile
-    command: npm run start  # Command to start the React app
+    process: web  # Command to start the React app
   backend:
     build: .  # Build from the root directory
     dockerfile: Dockerfile  # Optional: Path to a custom Dockerfile
-    command: gunicorn app:app  # Execute the start.sh script
+    process: server  # Execute the start.sh script
   web:
     routes:
       - service: frontend

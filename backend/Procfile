@@ -1,0 +1,3 @@
+web: npm run start -c "cd ./Obesity_application/obesity-app"  # Start React frontend in the correct directory
+worker: gunicorn app:app
+
