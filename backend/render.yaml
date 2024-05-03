@@ -7,7 +7,7 @@ services:
   backend:
     build: .  # Build from the root directory
     dockerfile: Dockerfile  # Optional: Path to a custom Dockerfile
-    command: ./start.sh  # Execute the start.sh script
+    command: gunicorn app:app  # Execute the start.sh script
   web:
     routes:
       - service: frontend
