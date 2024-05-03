@@ -16,9 +16,14 @@ CORS(app)
 with open('RandomForestClassifierModel', 'rb') as model_file:
     loaded_model = pickle.load(model_file)
 
+# @app.route('/')
+# def serve_react_app():
+#     return app.send_static_file('./Obesity_application/obesity-app/build/index.html')
+
+
 @app.route('/')
 def serve_react_app():
-    return app.send_static_file('./Obesity_application/obesity-app/build/index.html')
+    return app.send_from_directory(app.static_folder, './Obesity_application/obesity-app/build/index.html')
 
 @app.route('/<path:path>')
 def serve_any_other_static_file(path):
