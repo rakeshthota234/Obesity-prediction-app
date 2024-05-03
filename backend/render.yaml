@@ -1,0 +1,16 @@
+services:
+  frontend:
+    build:
+      context: ./Obesity_application/obesity-app  # Path to your React frontend directory
+      dockerfile: Dockerfile  # Optional: Path to a custom Dockerfile
+    command: npm run start  # Command to start the React app
+  backend:
+    build: .  # Build from the root directory
+    dockerfile: Dockerfile  # Optional: Path to a custom Dockerfile
+    command: gunicorn app:app  # Command to start the Flask app
+  web:
+    routes:
+      - service: frontend
+        path: /
+      - service: backend
+        path: /api  # Map Flask API routes to the backend service
