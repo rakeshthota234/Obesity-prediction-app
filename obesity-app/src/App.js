@@ -132,7 +132,7 @@ function App() {
     const sendDataToBackend = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://${window.RENDER_INTERNAL_HOSTNAME}:${window.RENDER_INTERNAL_PORT}', {
+            const response = await fetch('http://${window.RENDER_INTERNAL_HOSTNAME}:${window.RENDER_INTERNAL_PORT}/predict', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
