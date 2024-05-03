@@ -7,7 +7,7 @@ services:
   backend:
     build: .  # Build from the root directory
     dockerfile: Dockerfile  # Optional: Path to a custom Dockerfile
-    command: gunicorn app:app  # Command to start the Flask app
+    command: ./start.sh  # Execute the start.sh script
   web:
     routes:
       - service: frontend
