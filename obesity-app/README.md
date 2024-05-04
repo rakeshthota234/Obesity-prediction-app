@@ -1,6 +1,6 @@
 # OBESITY RISK PREDICTION
 
-Obesity Risk Prediction is an application that uses a `React UI` powered by a simple `Flask API Server`. **React** is a popular Javascript library for coding user interfaces baked by Facebook and Flask is a leading web framework written in Python. 
+Obesity Risk Prediction is an application that uses a `React UI` powered by a simple `Flask API Server`. **React** is a popular Javascript library for coding user interfaces and Flask is a leading web framework written in Python. 
 
 <br />
 
@@ -28,7 +28,7 @@ $ cd obesity-app
 > 👉 **Step 2** - Install dependencies via NPM or yarn
 
 ```bash
-$ npm i
+$ npm install
 // OR
 $ yarn
 ```
